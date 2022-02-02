@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Weather_API</key>
+	<dict>
+		<key>URL</key>
+		<string>https://api.openweathermap.org/data/2.5/onecall?exclude=minutely,daily&amp;units=imperial</string>
+		<key>KEY</key>
+		<string></string>
+	</dict>
+	<key>CovidActNow_API</key>
+	<dict>
+		<key>URL</key>
+		<string>https://api.covidactnow.org/v2</string>
+		<key>KEY</key>
+		<string></string>
+	</dict>
+	<key>Fips_API</key>
+	<dict>
+		<key>URL</key>
+		<string>https://geo.fcc.gov/api/census/block/find?showall=false&amp;format=json</string>
+	</dict>
+</dict>
+</plist>
