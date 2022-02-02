@@ -2,6 +2,11 @@
 
 COVID Weather is a demo application that provides real time information about the weather and COVID-19 statistics of your current location or any area into the U.S. Very useful to evaluate risks when you are out and about. COVID Weather is available in dark mode and light mode.
 
+## Screenshots
+
+<img src="https://user-images.githubusercontent.com/14079473/152230416-a6d25a77-e8ad-4d24-b0a0-711aaa2f32cd.png" width=35% height=35%><img src="https://user-images.githubusercontent.com/14079473/152229981-156ab8a5-1e68-4c37-ab7e-dfced6b87548.png" width=60% height=60% align="top">
+
+
 ## Technologies
 - Swift 5.0, UIKit, CoreLocation, MVC Design Pattern, AutoLayout, API Networking
 
