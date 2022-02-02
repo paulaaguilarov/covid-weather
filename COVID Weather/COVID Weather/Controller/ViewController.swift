@@ -79,7 +79,7 @@ class ViewController: UIViewController{
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         locationManager.requestWhenInUseAuthorization()
         
-       
+        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -166,19 +166,22 @@ extension ViewController:CovidWeatherManagerDelegate{
     
     // Triggered when there is an error
     func didFailWithError(error: Error) {
-        self.removeSpinnerView()
-        var errorMessage = ""
-        
-        switch error{
+        DispatchQueue.main.async {
+            var errorMessage = ""
+            
+            switch error{
             case CustomError.requestNotAllowed:
-                errorMessage = customErrorMessage.requestNotAllowed
+                self.removeSpinnerView()
+                errorMessage = self.customErrorMessage.requestNotAllowed
             case CustomError.locationNotFound:
-                errorMessage = customErrorMessage.locationNotFound
+                self.removeSpinnerView()
+                errorMessage = self.customErrorMessage.locationNotFound
             default:
-                errorMessage = customErrorMessage.defaultMessage
+                errorMessage = self.customErrorMessage.defaultMessage
+            }
+            
+            self.displayMessageToUser(errorMessage)
         }
-        
-        self.displayMessageToUser(errorMessage)
         
         print("Error:: \(error)")
     }
@@ -199,10 +202,10 @@ extension ViewController:CLLocationManagerDelegate{
             print("Trying to get authorization to get location...")
         }
     }
-      
+    
     // Handles the location information
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    
+        
         if let location = locations.last{
             locationManager.stopUpdatingLocation()
             

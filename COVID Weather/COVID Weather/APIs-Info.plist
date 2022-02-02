@@ -7,14 +7,14 @@
 		<key>URL</key>
 		<string>https://api.openweathermap.org/data/2.5/onecall?exclude=minutely,daily&amp;units=imperial</string>
 		<key>KEY</key>
-		<string></string>
+		<string>YOUR_API_KEY</string>
 	</dict>
 	<key>CovidActNow_API</key>
 	<dict>
 		<key>URL</key>
 		<string>https://api.covidactnow.org/v2</string>
 		<key>KEY</key>
-		<string></string>
+		<string>YOUR_API_KEY</string>
 	</dict>
 	<key>Fips_API</key>
 	<dict>
