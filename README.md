@@ -1,6 +1,6 @@
 # COVID-Weather
 
-Covid Weather is a demo application that provides real time information about the weather and COVID-19 statistics of your current location or any area into the U.S. Very useful to evaluate risks when you are out and about. COVID Weather is available in dark mode and light mode.
+COVID Weather is a demo application that provides real time information about the weather and COVID-19 statistics of your current location or any area into the U.S. Very useful to evaluate risks when you are out and about. COVID Weather is available in dark mode and light mode.
 
 ## Technologies
 - Swift 5.0, UIKit, CoreLocation, MVC Design Pattern, AutoLayout, API Networking
@@ -29,7 +29,7 @@ This application retrieves information from three differents APIs:
 3. Open the file `APIs-Info.plist` and set your corresponding APIs key.
 4. Build and run the app.
 
-## TO-DO list / What I Would Like to Improve
+## TO-DO list 
 - Include a navigation controller to add more pages into the app.
 - Add more hours into the weather forecast and make it scrollable.
 - Show more detail about the COVID-19 stats, like including graphs.
