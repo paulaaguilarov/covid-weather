@@ -1,4 +1,4 @@
-#Covid-Weather
+# COVID-Weather
 
 Covid Weather is a demo application that provides real time information about the weather and COVID-19 statistics of your current location or any area into the U.S. Very useful to evaluate risks when you are out and about. COVID Weather is available in dark mode and light mode.
 
