@@ -36,6 +36,6 @@ This application retrieves information from three differents APIs:
 4. Build and run the app.
 
 ## TO-DO list 
-- Add navigation controller to allow navigation to other informative screens.
+- Add a navigation controller to allow navigation to other informative screens.
 - Show more detail about the COVID-19 stats, like including graphs.
 - Add more hours into the weather forecast and make it scrollable.
