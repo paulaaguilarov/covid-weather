@@ -24,6 +24,7 @@
 		1A62027027A99CC000D087AD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62026F27A99CC000D087AD /* CustomError.swift */; };
 		1AA1ECF42791E2920024CFDA /* FIPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1ECF32791E2920024CFDA /* FIPSData.swift */; };
 		1AA1ECF6279233B70024CFDA /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1ECF5279233B70024CFDA /* LocationModel.swift */; };
+		1AB2B5A027AD64EE00842E31 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB2B59F27AD64EE00842E31 /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1A62026F27A99CC000D087AD /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		1AA1ECF32791E2920024CFDA /* FIPSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIPSData.swift; sourceTree = "<group>"; };
 		1AA1ECF5279233B70024CFDA /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		1AB2B59F27AD64EE00842E31 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1A48F0C22790B4F500E2988C /* ViewController.swift */,
+				1AB2B59F27AD64EE00842E31 /* SpinnerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				1A48F0E02790C7DE00E2988C /* FIPSModel.swift in Sources */,
 				1A48F0C12790B4F500E2988C /* SceneDelegate.swift in Sources */,
 				1A2F12C7279B3CCD00262032 /* Endpoints.swift in Sources */,
+				1AB2B5A027AD64EE00842E31 /* SpinnerViewController.swift in Sources */,
 				1A48F0D82790B91400E2988C /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

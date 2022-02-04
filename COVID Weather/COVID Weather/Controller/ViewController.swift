@@ -56,6 +56,7 @@ class ViewController: UIViewController{
     var conditionImgs:[UIImageView] = []
     
     var imperialMode = true  //Imperial or metric  mode
+    var appInBackground = false //App moves to the background
     
     let customErrorMessage = CustomErrorMessage()
     
@@ -70,6 +71,19 @@ class ViewController: UIViewController{
         
         tempModeSelector.addTarget(self, action: #selector(self.segmentedValueChanged(_:)), for: .valueChanged)
         
+        NotificationCenter.default.addObserver(
+                self,
+                selector:#selector(appBecomeActive),
+                name: UIApplication.didBecomeActiveNotification,
+                object: nil)
+        
+       NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(appMovedToBackground),
+                name: UIApplication.willResignActiveNotification,
+                object: nil)
+
+        
         // Creates loading view while doing network requests
         self.createSpinnerView()
         
@@ -78,8 +92,18 @@ class ViewController: UIViewController{
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         locationManager.requestWhenInUseAuthorization()
-        
-        
+    }
+    
+    @objc func appBecomeActive() {
+        if self.appInBackground == true{
+            // Refreshes data according to current location
+            self.locationManager.requestLocation()
+        }
+        self.appInBackground = false
+    }
+    
+    @objc func appMovedToBackground() {
+        self.appInBackground = true
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -202,7 +226,7 @@ extension ViewController:CLLocationManagerDelegate{
             print("Trying to get authorization to get location...")
         }
     }
-    
+     
     // Handles the location information
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -240,14 +264,6 @@ extension ViewController:CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("LocationManager didFailWithError \(error.localizedDescription)")
-        locationManager.stopUpdatingLocation()
-        self.displayMessageToUser(customErrorMessage.locationNotFound)
-        if let error = error as? CLError, error.code == .denied {
-            // Location updates are not authorized.
-            // To prevent forever looping of `didFailWithError` callback
-            locationManager.stopMonitoringSignificantLocationChanges()
-            return
-        }
     }
     
     @IBAction func onCurrentLocationPressed(_ sender: UIButton) {
@@ -292,22 +308,6 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-//MARK: - SpinnerViewController
 
-class SpinnerViewController: UIViewController {
-    var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
-    
-    override func loadView() {
-        view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
-        
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.startAnimating()
-        view.addSubview(spinner)
-        
-        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-}
 
 

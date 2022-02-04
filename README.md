@@ -27,6 +27,7 @@ This application retrieves information from three differents APIs:
 2. Users can search any place into the U.S and get the weather forecast and COVID-19 stats of the area.
 3. Users can get the weather and COVID-19 stats of their current location by tapping a location button.
 4. The app is available in dark mode and light mode.
+5. Temperatures can be displayed in Celsius or Fahrenheit units. 
 
 ## Getting Started
 1. Clone/Download the repository.
@@ -35,6 +36,6 @@ This application retrieves information from three differents APIs:
 4. Build and run the app.
 
 ## TO-DO list 
-- Include a navigation controller to add more pages into the app.
-- Add more hours into the weather forecast and make it scrollable.
+- Add navigation controller to allow navigation to other informative screens.
 - Show more detail about the COVID-19 stats, like including graphs.
+- Add more hours into the weather forecast and make it scrollable.
